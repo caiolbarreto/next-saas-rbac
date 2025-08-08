@@ -4,7 +4,7 @@ import {
   createMongoAbility,
   MongoAbility,
 } from '@casl/ability'
-import { z } from 'zod'
+import { z } from 'zod/v4'
 
 import { User } from './models/user'
 import { permissions } from './permissions'

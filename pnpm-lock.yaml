@@ -114,8 +114,8 @@ importers:
         specifier: ^6.7.1
         version: 6.7.1
       zod:
-        specifier: ^3.23.8
-        version: 3.23.8
+        specifier: ^3.25.67
+        version: 3.25.67
     devDependencies:
       '@saas/eslint-config':
         specifier: workspace:*
@@ -133,7 +133,7 @@ importers:
         specifier: ^0.13.8
         version: 0.13.8(typescript@5.4.5)(zod@3.25.67)
       zod:
-        specifier: ^3.23.8
+        specifier: ^3.25.67
         version: 3.25.67
     devDependencies:
       '@saas/eslint-config':
@@ -2035,9 +2035,6 @@ packages:
   yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
-
-  zod@3.23.8:
-    resolution: {integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==}
 
   zod@3.25.67:
     resolution: {integrity: sha512-idA2YXwpCdqUSKRCACDE6ItZD9TZzy3OZMtpfLoh6oPR47lipysRrJfjzMqFxQ3uJuUPyUeWe1r9vLH33xO/Qw==}
@@ -4146,7 +4143,5 @@ snapshots:
   yaml@2.8.0: {}
 
   yocto-queue@0.1.0: {}
-
-  zod@3.23.8: {}
 
   zod@3.25.67: {}
