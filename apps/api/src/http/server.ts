@@ -23,6 +23,7 @@ import { getOrganizations } from './routes/organizations/get-organizations'
 import { shutdownOrganization } from './routes/organizations/shutdown-organization'
 import { transferOrganization } from './routes/organizations/transfer-organization'
 import { updateOrganization } from './routes/organizations/update-organization'
+import { createProject } from './routes/projects/create-project'
 
 const app = fastify().withTypeProvider<ZodTypeProvider>()
 
@@ -78,6 +79,9 @@ app.register(getOrganizations)
 app.register(updateOrganization)
 app.register(shutdownOrganization)
 app.register(transferOrganization)
+
+// Project routes
+app.register(createProject)
 
 app.listen({ port: 3333 }).then(() => {
   console.log('HTTP server running')
