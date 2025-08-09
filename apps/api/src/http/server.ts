@@ -1,7 +1,6 @@
 import fastifyCors from '@fastify/cors'
 import fastifyJwt from '@fastify/jwt'
 import fastifySwagger from '@fastify/swagger'
-import fastifySwaggerUi from '@fastify/swagger-ui'
 import { env } from '@saas/env'
 import { fastify } from 'fastify'
 import {
@@ -21,6 +20,7 @@ import { createOrganization } from './routes/organizations/create-organization'
 import { getMembership } from './routes/organizations/get-membership'
 import { getOrganization } from './routes/organizations/get-organization'
 import { getOrganizations } from './routes/organizations/get-organizations'
+import { updateOrganization } from './routes/organizations/update-organization'
 
 const app = fastify().withTypeProvider<ZodTypeProvider>()
 
@@ -47,8 +47,11 @@ app.register(fastifySwagger, {
   transform: jsonSchemaTransform,
 })
 
-app.register(fastifySwaggerUi, {
+app.register(import('@scalar/fastify-api-reference'), {
   routePrefix: '/docs',
+  configuration: {
+    theme: 'elysiajs',
+  },
 })
 
 app.register(fastifyJwt, {
@@ -70,6 +73,7 @@ app.register(createOrganization)
 app.register(getMembership)
 app.register(getOrganization)
 app.register(getOrganizations)
+app.register(updateOrganization)
 
 app.listen({ port: 3333 }).then(() => {
   console.log('HTTP server running')
