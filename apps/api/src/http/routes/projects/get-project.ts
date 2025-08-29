@@ -34,11 +34,11 @@ export async function getProject(app: FastifyInstance) {
                 avatarUrl: z.url().nullable(),
                 ownerId: z.uuid(),
                 organizationId: z.uuid(),
-                owner: {
+                owner: z.object({
                   name: z.string().nullable(),
                   id: z.uuid(),
                   avatarUrl: z.url().nullable(),
-                },
+                }),
               }),
             }),
           },
