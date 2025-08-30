@@ -30,7 +30,7 @@ export async function createInvite(app: FastifyInstance) {
           }),
           response: {
             201: z.object({
-              inviteId: z.string().uuid(),
+              inviteId: z.uuid(),
             }),
           },
         },

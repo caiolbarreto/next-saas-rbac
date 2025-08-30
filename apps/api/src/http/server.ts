@@ -17,6 +17,7 @@ import { getProfile } from './routes/auth/get-profile'
 import { requestPasswordRecover } from './routes/auth/request-passowrd-recover'
 import { resetPassword } from './routes/auth/reset-password'
 import { createInvite } from './routes/invites/create-invite'
+import { getInvite } from './routes/invites/get-invite'
 import { getMembers } from './routes/members/get-members'
 import { updateMember } from './routes/members/update-member'
 import { createOrganization } from './routes/organizations/create-organization'
@@ -100,6 +101,7 @@ app.register(updateMember)
 
 // Invites routes
 app.register(createInvite)
+app.register(getInvite)
 
 app.listen({ port: 3333 }).then(() => {
   console.log('HTTP server running')
